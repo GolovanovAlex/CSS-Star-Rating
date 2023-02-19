@@ -13,6 +13,7 @@ body {
 .rating {
   position: relative;
   display: flex;
+  flex-direction: row-reverse;
   gap: 4px;
   padding: 30px 40px;
   border: 3px solid #111;
@@ -40,5 +41,11 @@ body {
   font-family: fontAwesome;
   font-size: 34px;
   color: #111;
-  transition: 0.5;
+  transition: 0.5s;
+}
+.rating input:hover ~ input::before,
+.rating input:hover::before,
+.rating input:checked ~ input::before,
+.rating input:checked::before {
+  color: var(--c);
 }
